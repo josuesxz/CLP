@@ -1,0 +1,46 @@
+CONFIGURAR LIMITES DE TORQUE
+60E0(INT) = 10000 (1000.0%) ou o valor desejado
+60E1(INT) = 10000 (1000.0%) ou o valor desejado
+***********************
+SERVO ON
+Bits 0,1,2 e 3 da 6040(INT) Ligados
+***********************
+Sequência MODO VELOCIDADE (Profile Velocity)
+6060(INT) = 3 
+(6061(INT) INT devolve 3)
+60FF(DOUBLE INT) = ###.## RPM 
+Ligar bit 15 da 6040(INT)
+Desligar bit 15 da 6040(INT) quando quiser parar
+***********************
+Sequência MODO TORQUE (Profile Torque)
+6060(INT) = 4 
+(6061(INT) INT devolve 4)
+2D20(DOUBLE INT) = ###.## RPM 
+6071(INT) =  ####.# % Torque Desejado em "%" do torque máx.
+Ligar bit 15 da 6040(INT)
+Desligar bit 15 da 6040(INT)
+6060(INT) = 3 ou 1 ou 6 quando quiser parar
+***********************
+Sequencia MODO HOME (Profile Homing)
+6060(INT) = 6 
+(6061(INT) devolve 6)
+Ligar Bit4 da 6040(INT)
+Desligar Bit4 da 6040(INT) após concluir
+***********************
+Sequência MODO POSITIONING (Profile Position) MODO ABSOLUTO
+6060(INT) = 1
+(6061(INT) devolve 1)
+607A(DOUBLE INT)= Posição desejada
+6081(DOUBLE INT) = ###.## RPM (velocidade desejada)
+Ligar Bit4 da 6040(INT)
+Desligar Bit4 da 6040(INT) após concluir
+***********************
+Sequência MODO POSITIONING (Profile Position) MODO INCREMENTAL
+6060(INT) = 1
+(6061(INT) devolve 1)
+607A (DOUBLE INT)= Posição desejada
+6081 (DOUBLE INT) = ###.## RPM (velocidade desejada)
+Ligar Bit6 da 6040 (INT)
+Ligar Bit4 da 6040 (INT)
+Desligar Bit4 da 6040(INT) após concluir
+***********************
