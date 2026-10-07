@@ -1,0 +1,11 @@
+[BEGIN FB INPUTS]
+I1=micro820.micro820.prog1/tonoff_2.in,0x415,BOOL
+I2=micro820.micro820.prog1/tonoff_2.pt,0x13B8,TIME
+I3=micro820.micro820.prog1/tonoff_2.ptof,0x13BC,TIME
+I4=micro820.micro820.prog1/tonoff_1.in,0x416,BOOL
+I5=micro820.micro820.prog1/tonoff_1.pt,0x13B8,TIME
+I6=micro820.micro820.prog1/tonoff_1.ptof,0x13BC,TIME
+I7=micro820.micro820.prog1/tonoff_3.in,0x454,BOOL
+I8=micro820.micro820.prog1/tonoff_3.pt,0x13B8,TIME
+I9=micro820.micro820.prog1/tonoff_3.ptof,0x13BC,TIME
+[END]

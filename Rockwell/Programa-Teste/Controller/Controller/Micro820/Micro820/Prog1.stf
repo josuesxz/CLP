@@ -1,0 +1,56 @@
+PROGRAM Prog1
+#info= QLD
+BOF
+
+
+(**)
+
+SOR  [0,1] (**) (**)  
+ BST  
+ BST  XIC  [1,0] (*bLiga*) (**)
+   NXB  XIP  [1,1] (*TON_3.Q*) (*Q*)
+ BND
+
+   NXB  XIC  [1,2] (*oMotor*) (**)
+ BND
+  XIO  [2,0] (*bDesliga*) (**)  XIO  [3,0] (*TON_1.Q*) (*Q*)  OTE  [4,0] (*oMotor*) (**)
+EOR [5,0]
+
+
+(**)
+
+SOR  [0,5] (**) (**)  XIC  [1,0] (*oMotor*) (**)  OTE  [2,0] (*_IO_EM_DO_00*) (**)
+EOR [3,0]
+
+
+(**)
+
+SOR  [0,7] (**) (**)  XIC  [1,0] (*oMotor*) (**)  XIO  [2,0] (*TON_2.Q*) (*Q*)  FB  [3,0] (*TON*) (*TON_1*) ( (*IN:IN*)(**) (**)  , (*PT:PT*)(*timer*) (**) ; (*Q:Q*)(**) (**)  , (*ET:ET*)(**) (**) )  OTS  [6,0] (*_IO_EM_DO_01*) (**)
+EOR [7,0]
+
+
+(**)
+
+SOR  [0,10] (**) (**)  XIC  [1,0] (*_IO_EM_DO_01*) (**)  FB  [2,0] (*TON*) (*TON_2*) ( (*IN:IN*)(**) (**)  , (*PT:PT*)(*timer*) (**) ; (*Q:Q*)(**) (**)  , (*ET:ET*)(**) (**) )  OTS  [5,0] (*_IO_EM_DO_02*) (**)
+EOR [6,0]
+
+
+(**)
+
+SOR  [0,13] (**) (**)  XIC  [1,0] (*TON_2.Q*) (*Q*)  OTR  [2,0] (*_IO_EM_DO_01*) (**)
+EOR [3,0]
+
+
+(**)
+
+SOR  [0,15] (**) (**)  XIC  [1,0] (*_IO_EM_DO_02*) (**)  FB  [2,0] (*TON*) (*TON_3*) ( (*IN:IN*)(**) (**)  , (*PT:PT*)(*timer*) (**) ; (*Q:Q*)(**) (**)  , (*ET:ET*)(**) (**) )
+EOR [5,0]
+
+
+(**)
+
+SOR  [0,18] (**) (**)  XIC  [1,0] (*TON_3.Q*) (*Q*)  OTR  [2,0] (*_IO_EM_DO_02*) (**)
+EOR [3,0]
+EOF
+#end_info
+END_PROGRAM

@@ -1,0 +1,42 @@
+PROGRAM Prog1
+#info= QLD
+BOF
+
+
+(**)
+
+SOR  [0,1] (*TESTE_DE_AUTOMAO*) (**)  XIC  [1,0] (*LIGA_MOTOR*) (**)  OTE  [2,0] (*MOTOR01*) (**)
+EOR [3,0]
+
+
+(**)
+
+SOR  [0,3] (**) (**)  XIC  [1,0] (*_IO_EM_DO_01*) (**)  FB  [2,0] (*TONOFF*) (*TONOFF_2*) ( (*IN:*)(**) (**)  , (*PT:*)(*t#3s*) (**)  , (*PTOF:*)(*t#5s*) (**) ; (*Q:*)(**) (**)  , (*ET:*)(**) (**) )  OTE  [5,0] (*_IO_EM_DO_00*) (**)
+EOR [6,0]
+
+
+(**)
+
+SOR  [0,7] (**) (**)  XIC  [1,0] (*_IO_EM_DO_02*) (**)  FB  [2,0] (*TONOFF*) (*TONOFF_1*) ( (*IN:*)(**) (**)  , (*PT:*)(*T#3S*) (**)  , (*PTOF:*)(*T#5S*) (**) ; (*Q:*)(**) (**)  , (*ET:*)(*Teste01*) (**) )  OTE  [5,0] (*_IO_EM_DO_01*) (**)
+EOR [6,0]
+
+
+(**)
+
+SOR  [0,11] (**) (**)  XIC  [1,0] (*VERDE*) (**)  FB  [2,0] (*TONOFF*) (*TONOFF_3*) ( (*IN:*)(**) (**)  , (*PT:*)(*t#3s*) (**)  , (*PTOF:*)(*t#5s*) (**) ; (*Q:*)(**) (**)  , (*ET:*)(*Teste01*) (**) )  OTE  [5,0] (*_IO_EM_DO_02*) (**)
+EOR [6,0]
+
+
+(**)
+
+SOR  [0,15] (**) (**)  XIC  [1,0] (*_IO_EM_DI_00*) (**)  OTS  [2,0] (*VERDE*) (**)
+EOR [3,0]
+
+
+(**)
+
+SOR  [0,17] (**) (**)  XIC  [1,0] (*_IO_EM_DI_01*) (*DESLIGA VERDE*)  OTR  [2,0] (*VERDE*) (**)
+EOR [3,0]
+EOF
+#end_info
+END_PROGRAM
